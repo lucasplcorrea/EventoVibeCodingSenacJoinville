@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15-alpine
+    restart: always
+    environment:
+      POSTGRES_USER: vibecoding2
+      POSTGRES_PASSWORD: vibepassword2
+      POSTGRES_DB: rachaaconta
+    ports:
+      - "5444:5432"
+    volumes:
+      - vibecoding_pgdata2:/var/lib/postgresql/data
+
+volumes:
+  vibecoding_pgdata2:
