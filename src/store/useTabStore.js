@@ -6,6 +6,7 @@ const socket = io(); // Auto root for websockets
 export const useTabStore = create((set, get) => ({
   tabId: null,
   tableName: '',
+  waiterName: '',
   status: 'active',
   tipPercentage: 10,
   isTipEnabled: true,
@@ -24,6 +25,7 @@ export const useTabStore = create((set, get) => ({
         set({
           tableName: state.name,
           status: state.status,
+          waiterName: state.waiter?.name || '...',
           people: state.people,
           consumedItems: state.consumedItems
         });
@@ -37,6 +39,7 @@ export const useTabStore = create((set, get) => ({
            set({
              tableName: state.name,
              status: state.status,
+             waiterName: state.waiter?.name || '...',
              people: state.people,
              consumedItems: state.consumedItems
            });
