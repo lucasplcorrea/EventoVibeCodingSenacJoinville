@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Plus, Users, UtensilsCrossed, CalendarClock, UserSquare2, DollarSign, QrCode } from 'lucide-react';
+import { Plus, Users, UtensilsCrossed, CalendarClock, UserSquare2, DollarSign, QrCode, CheckCircle2 } from 'lucide-react';
 
 export function WaiterView() {
   const navigate = useNavigate();
@@ -111,7 +111,7 @@ export function WaiterView() {
                       </div>
                     </div>
                     <button onClick={() => navigate(`/table/${table.code}?waiter=true`)} className="w-full bg-blue-50 text-blue-700 hover:bg-blue-600 hover:text-white py-3.5 rounded-xl font-bold transition-all flex justify-center items-center gap-2 shadow-sm">
-                      <UtensilsCrossed size={18} /> Acessar Comanda
+                      <UtensilsCrossed size={18} /> Abrir e Fechar Comanda
                     </button>
                   </div>
                 ))}
